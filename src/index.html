@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Leonida Hub | Honest GTA 6 news, guides and 100% tracker</title>
+  <meta name="description" content="A fan-made GTA 6 hub. Dated, sourced news with clear labels for what is confirmed and what is rumour, plain-language guides, and a free 100% completion tracker.">
+  <meta property="og:title" content="Leonida Hub: honest GTA 6 news, guides and tracker">
+  <meta property="og:description" content="GTA 6 news labelled confirmed, reported or rumour. Guides and a free 100% tracker.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-row">
+      <a class="brand" href="index.html">Leonida <span>Hub</span></a>
+      <nav class="nav" aria-label="Main">
+        <a href="news.html">News</a>
+        <a href="guides.html">Guides</a>
+        <a href="tracker.html">Tracker</a>
+      </nav>
+      <button id="themeBtn" class="ghost icon" type="button" aria-label="Switch light or dark theme">&#9680;</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <h1>Everything GTA 6, told straight</h1>
+      <p class="lede">A fan-made home for Grand Theft Auto VI. Every news item is dated, sourced and labelled, so you always know what is confirmed and what is only a rumour.</p>
+    </section>
+
+    <section class="facts" aria-label="Quick facts">
+      <div class="fact"><span class="fact-k">Released</span><span class="fact-v">19 Nov 2026</span></div>
+      <div class="fact"><span class="fact-k">Platforms</span><span class="fact-v">PS5, Xbox Series X|S</span></div>
+      <div class="fact"><span class="fact-k">PC version</span><span class="fact-v">Not announced</span></div>
+      <div class="fact"><span class="fact-k">Online mode</span><span class="fact-v">Not announced</span></div>
+    </section>
+
+    <section class="tiles">
+      <a class="tile" href="news.html">
+        <h2>News</h2>
+        <p>Updates with a label on each one: confirmed, reported, estimate or unconfirmed.</p>
+      </a>
+      <a class="tile" href="guides.html">
+        <h2>Guides</h2>
+        <p>Platforms, price, playing without a console, story structure and video rules.</p>
+      </a>
+      <a class="tile" href="tracker.html">
+        <h2>100% tracker</h2>
+        <p>Count your progress towards every completion requirement. No login.</p>
+      </a>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Latest news</h2>
+        <a href="news.html">All news</a>
+      </div>
+      <div id="newsList" data-limit="4"></div>
+    </section>
+
+    <section class="panel">
+      <h2>How this site works</h2>
+      <ul class="plain">
+        <li><strong>Every item has a date and a source.</strong> If we cannot point to where something came from, we do not publish it.</li>
+        <li><strong>Every item has a label.</strong> Official statements are marked confirmed. Third-party numbers are marked estimate. Rumours are marked unconfirmed.</li>
+        <li><strong>No leaks and no story spoilers in headlines.</strong> Chapter names in the tracker stay hidden unless you choose to show them.</li>
+        <li><strong>Corrections are made in the open.</strong> When a fact changes, the entry is updated with a new date.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="wrap foot">
+    <p>Unofficial fan-made site. Not affiliated with or endorsed by Rockstar Games or Take-Two Interactive. Grand Theft Auto is a trademark of its owner.</p>
+  </footer>
+
+  <script src="news-data.js"></script>
+  <script src="site.js"></script>
+</body>
+</html>

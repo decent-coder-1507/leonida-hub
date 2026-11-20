@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GTA 6 100% Completion Tracker | Leonida Hub</title>
+  <meta name="description" content="Free GTA 6 100% completion tracker. Count missions, collectibles, side activities and fencing goals, with progress saved on your device. No login.">
+  <meta property="og:title" content="GTA 6 100% Completion Tracker">
+  <meta property="og:description" content="Track every 100% requirement in GTA 6. Free, no login, works on your phone.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-row">
+      <a class="brand" href="index.html">Leonida <span>Hub</span></a>
+      <nav class="nav" aria-label="Main">
+        <a href="news.html">News</a>
+        <a href="guides.html">Guides</a>
+        <a href="tracker.html" aria-current="page">Tracker</a>
+      </nav>
+      <button id="themeBtn" class="ghost icon" type="button" aria-label="Switch light or dark theme">&#9680;</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <h1>GTA 6 100% completion tracker</h1>
+      <p class="lede">Count your progress towards every 100% requirement. It saves on this device, with no login.</p>
+
+      <div class="overall" aria-live="polite">
+        <div class="overall-num"><span id="overallPct">0</span>%</div>
+        <div class="overall-side">
+          <div class="bar big"><div id="overallBar" class="fill"></div></div>
+          <p id="overallText" class="muted"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="tools" aria-label="Tracker options">
+      <input id="search" type="search" placeholder="Search requirements" aria-label="Search requirements">
+      <label class="check"><input id="hideDone" type="checkbox"> Hide completed</label>
+      <label class="check"><input id="showNames" type="checkbox"> Show chapter names</label>
+    </section>
+
+    <div id="list"></div>
+    <p id="empty" class="muted" hidden>No requirements match your search.</p>
+
+    <section class="panel">
+      <h2>Back up or move your progress</h2>
+      <p class="muted">Copy a progress code to move your progress to another device, or paste one to restore it.</p>
+      <div class="btn-row">
+        <button id="exportBtn" type="button">Copy progress code</button>
+        <button id="importBtn" class="ghost" type="button">Paste a code</button>
+        <button id="resetBtn" class="ghost danger" type="button">Reset all</button>
+      </div>
+      <p id="status" class="muted" role="status"></p>
+    </section>
+
+    <section class="panel">
+      <h2>How this tracker works</h2>
+      <p>GTA 6 does not ask for every collectible or activity to reach 100%. Each entry shows how many the game requires and how many exist, and turns green when you reach the required count.</p>
+      <p>The percentage above is this tracker's own measure of the listed requirements. It is not the in-game completion figure.</p>
+      <p class="muted">Counts come from published launch-week guides and may be corrected. Check them against your pause-menu checklist. Data last updated <span id="updated"></span>.</p>
+    </section>
+  </main>
+
+  <footer class="wrap foot">
+    <p>Unofficial fan-made site. Not affiliated with or endorsed by Rockstar Games or Take-Two Interactive. Grand Theft Auto is a trademark of its owner.</p>
+  </footer>
+
+  <dialog id="importDialog">
+    <form method="dialog">
+      <h2>Paste a progress code</h2>
+      <textarea id="importText" rows="4" aria-label="Progress code"></textarea>
+      <p id="importError" class="error" hidden>That code could not be read.</p>
+      <div class="btn-row">
+        <button id="importConfirm" type="button">Restore progress</button>
+        <button class="ghost" value="cancel">Cancel</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="resetDialog">
+    <form method="dialog">
+      <h2>Reset all progress?</h2>
+      <p class="muted">This clears every counter on this device and cannot be undone.</p>
+      <div class="btn-row">
+        <button id="resetConfirm" class="danger" type="button">Reset all</button>
+        <button class="ghost" value="cancel">Cancel</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="data.js"></script>
+  <script src="site.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

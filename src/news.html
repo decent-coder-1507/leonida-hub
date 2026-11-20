@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GTA 6 News: confirmed vs rumour | Leonida Hub</title>
+  <meta name="description" content="GTA 6 news with a clear label on every item: confirmed, reported, estimate, unconfirmed or not announced. Dated and sourced.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-row">
+      <a class="brand" href="index.html">Leonida <span>Hub</span></a>
+      <nav class="nav" aria-label="Main">
+        <a href="news.html" aria-current="page">News</a>
+        <a href="guides.html">Guides</a>
+        <a href="tracker.html">Tracker</a>
+      </nav>
+      <button id="themeBtn" class="ghost icon" type="button" aria-label="Switch light or dark theme">&#9680;</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <h1>GTA 6 news</h1>
+      <p class="lede">Newest first. The label on each item tells you how solid it is.</p>
+    </section>
+
+    <div id="newsFilters" class="filters" role="group" aria-label="Filter news by label">
+      <button type="button" class="chip" data-status="all" aria-pressed="true">All</button>
+      <button type="button" class="chip" data-status="confirmed" aria-pressed="false">Confirmed</button>
+      <button type="button" class="chip" data-status="reported" aria-pressed="false">Reported</button>
+      <button type="button" class="chip" data-status="estimate" aria-pressed="false">Estimate</button>
+      <button type="button" class="chip" data-status="unconfirmed" aria-pressed="false">Unconfirmed</button>
+      <button type="button" class="chip" data-status="not-announced" aria-pressed="false">Not announced</button>
+    </div>
+
+    <div id="newsList"></div>
+
+    <section class="panel">
+      <h2>What the labels mean</h2>
+      <ul class="plain">
+        <li><span class="badge badge-confirmed">Confirmed</span> Stated by Rockstar, Take-Two, Sony, Microsoft or another primary source.</li>
+        <li><span class="badge badge-reported">Reported</span> Published by a reliable outlet, not yet confirmed by a primary source.</li>
+        <li><span class="badge badge-estimate">Estimate</span> A third-party number, not an official figure.</li>
+        <li><span class="badge badge-unconfirmed">Unconfirmed</span> A claim or rumour without solid backing.</li>
+        <li><span class="badge badge-not-announced">Not announced</span> A common question with no official answer yet.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="wrap foot">
+    <p>Unofficial fan-made site. Not affiliated with or endorsed by Rockstar Games or Take-Two Interactive. Grand Theft Auto is a trademark of its owner.</p>
+  </footer>
+
+  <script src="news-data.js"></script>
+  <script src="site.js"></script>
+</body>
+</html>
